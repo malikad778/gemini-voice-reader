@@ -50,7 +50,7 @@ Unlike a simple play button, it gives you a full player:
 
 ### Brave or Chrome, manual install
 
-1. Download the latest ZIP from [Releases](../../releases), or clone this repository.
+1. Download the latest ZIP from [Releases](https://github.com/malikad778/gemini-voice-reader/releases), or clone this repository.
 2. Extract it into a folder.
 3. Open `brave://extensions/` or `chrome://extensions/`.
 4. Turn on **Developer mode** in the top right.
