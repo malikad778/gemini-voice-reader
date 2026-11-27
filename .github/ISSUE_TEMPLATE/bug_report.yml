@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a problem with Gemini Voice Reader Everywhere
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please remove cookies, tokens, and private text before posting.
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      placeholder: "2.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Brave
+        - Chrome
+        - Other Chromium browser
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a page
+        2. Select text
+        3. Click Listen
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console messages
+      description: Paste relevant console output with sensitive values removed.
+    validations:
+      required: false

@@ -1,0 +1,32 @@
+{
+  "name": "gemini-voice-reader-everywhere",
+  "version": "2.2.1",
+  "private": true,
+  "description": "Unofficial open source Gemini voice reader for Chrome and Brave. Read selected text with Gemini's web voice using a draggable player with seeking, loop, and 0.5x speed.",
+  "author": "Adnan Haider (https://github.com/malikad778)",
+  "license": "MIT",
+  "homepage": "https://github.com/malikad778/gemini-voice-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malikad778/gemini-voice-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/malikad778/gemini-voice-reader/issues"
+  },
+  "keywords": [
+    "gemini",
+    "gemini-tts",
+    "gemini-voice-reader",
+    "text-to-speech",
+    "tts",
+    "read-aloud",
+    "selected-text",
+    "chrome-extension",
+    "brave-extension",
+    "browser-extension",
+    "manifest-v3",
+    "accessibility",
+    "no-api-key",
+    "web-speech"
+  ]
+}

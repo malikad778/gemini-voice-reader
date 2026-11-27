@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Voice Reader Everywhere",
+  "version": "2.2.1",
+  "description": "Select text on any site and listen with Gemini's web voice: draggable player, loop, 0.5x speed, per-second seeking, voice accents.",
+  "homepage_url": "https://github.com/malikad778/gemini-voice-reader",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://chrome.google.com/*",
+        "https://chromewebstore.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
