@@ -4,7 +4,7 @@ Gemini Voice Reader Everywhere has no analytics, telemetry, tracking, advertisin
 
 ## Data sent to Google
 
-When you click Listen, the selected text is sent to Google's Gemini endpoint under your signed in Gemini web session. Only send text that you would be comfortable pasting into Gemini.
+When you click Listen, the selected text is sent to Google's Gemini endpoint under your signed in Gemini web session. If optional API mode is enabled, the text is sent to the official Gemini TTS endpoint with your API key. Only send text that you would be comfortable pasting into Gemini.
 
 ## Data stored locally
 
@@ -13,6 +13,9 @@ The extension stores these values in browser local storage:
 - Playback speed
 - Voice accent
 - Loop state
+- Follow, Clean, Study, Dialogue, and API mode settings
+- Optional Gemini API key
+- Up to 20 recent clip texts
 - Widget position
 
 Gemini session tokens are kept in memory only. They are not written to disk by this extension.

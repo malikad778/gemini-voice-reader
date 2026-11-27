@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Gemini Voice Reader Everywhere",
-  "version": "2.2.1",
-  "description": "Select text on any site and listen with Gemini's web voice: draggable player, loop, 0.5x speed, per-second seeking, voice accents.",
+  "version": "2.3.0",
+  "description": "Select text on any site and hear Gemini's voice with follow along highlight, A to B loop, 0.5x speed, seeking, study mode, dialogue mode, and named voices.",
   "homepage_url": "https://github.com/malikad778/gemini-voice-reader",
   "permissions": [
     "storage"

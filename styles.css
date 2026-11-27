@@ -220,6 +220,7 @@
 
 /* Wide scrubber: 1 unit = 1 second, so dragging is per-second precise */
 .gemini-tts-progress-wrap {
+  position: relative !important;
   display: flex !important;
   align-items: center !important;
   flex: 1 1 auto !important;
@@ -344,6 +345,183 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* A to B loop markers */
+.gemini-tts-ab-marker {
+  position: absolute !important;
+  top: -8px !important;
+  z-index: 2 !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  background: #fbbc04 !important;
+  color: #202124 !important;
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  line-height: 12px !important;
+  text-align: center !important;
+  cursor: ew-resize !important;
+  touch-action: none !important;
+  transform: translateX(-50%) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+.gemini-tts-ab-marker:hover {
+  background: #ffcf5c !important;
+}
+
+.gemini-tts-ab-btn.is-on {
+  background: #fbbc04 !important;
+  color: #202124 !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 10px rgba(251, 188, 4, 0.6) !important;
+}
+
+.gemini-tts-download-btn {
+  color: #aecbfa !important;
+}
+
+/* Follow along highlight overlay. It does not mutate page DOM. */
+.gemini-tts-follow-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483645 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.gemini-tts-follow-overlay.is-visible {
+  display: block !important;
+}
+
+.gemini-tts-follow-rect {
+  position: fixed !important;
+  background: rgba(251, 188, 4, 0.3) !important;
+  border-bottom: 2px solid rgba(251, 188, 4, 0.9) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 8px rgba(251, 188, 4, 0.35) !important;
+}
+
+/* Compact tools popover */
+.gemini-tts-tools-panel {
+  display: none !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  padding: 7px !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  max-height: 190px !important;
+  overflow-y: auto !important;
+}
+
+.gemini-tts-tools-panel.is-open {
+  display: flex !important;
+}
+
+.gemini-tts-tools-row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important;
+}
+
+.gemini-tts-tool-chip {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #d7dadc !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 4px 8px !important;
+  font-family: inherit !important;
+  font-size: 10.5px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  white-space: nowrap !important;
+}
+
+.gemini-tts-tool-chip:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+.gemini-tts-tool-chip.is-on {
+  background: #8ab4f8 !important;
+  color: #202124 !important;
+  border-color: #8ab4f8 !important;
+  font-weight: 700 !important;
+}
+
+.gemini-tts-sleep-label {
+  color: #9aa0a6 !important;
+  font-size: 10px !important;
+  font-variant-numeric: tabular-nums !important;
+  padding: 0 2px !important;
+}
+
+.gemini-tts-api-fields {
+  display: flex !important;
+  gap: 4px !important;
+}
+
+.gemini-tts-api-key,
+.gemini-tts-api-voice {
+  min-width: 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #e3e3e3 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 10px !important;
+  padding: 4px 6px !important;
+  font-family: inherit !important;
+  font-size: 10.5px !important;
+  outline: none !important;
+}
+
+.gemini-tts-api-key {
+  flex: 1 1 auto !important;
+}
+
+.gemini-tts-api-voice {
+  flex: 0 0 78px !important;
+}
+
+.gemini-tts-api-key::placeholder {
+  color: #80868b !important;
+}
+
+.gemini-tts-recent {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important;
+}
+
+.gemini-tts-recent-empty {
+  color: #80868b !important;
+  font-size: 10px !important;
+  padding: 2px !important;
+}
+
+.gemini-tts-recent-item {
+  max-width: 130px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #bdc1c6 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 3px 7px !important;
+  font-family: inherit !important;
+  font-size: 10px !important;
+  cursor: pointer !important;
+}
+
+.gemini-tts-recent-item:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
 }
 
 @media (max-width: 560px) {

@@ -152,7 +152,41 @@ On `gemini.google.com`, `content.js` tries a direct fetch first. On other sites,
 
 ---
 
-## 9. Public references
+## 9. Optional official API mode
+
+The free path uses the undocumented web RPC. The extension also supports an optional official path for named voices.
+
+```http
+POST https://generativelanguage.googleapis.com/v1beta/interactions
+x-goog-api-key: <user supplied key>
+Content-Type: application/json
+```
+
+Body shape:
+
+```json
+{
+  "model": "gemini-3.8-flash-tts",
+  "input": [{
+    "type": "user_input",
+    "content": [{
+      "type": "text",
+      "text": "Have a wonderful day!",
+      "annotations": [{ "type": "speech_metadata", "style": "clear, natural reading" }]
+    }]
+  }],
+  "response_format": { "type": "audio" },
+  "generation_config": {
+    "speech_config": [{ "voice": "Kore" }]
+  }
+}
+```
+
+The base64 audio is read from `steps[].content[]` where `type` is `audio`. Unary responses are complete WAV files. The key is stored locally and never sent anywhere except this endpoint.
+
+---
+
+## 10. Public references
 
 These projects independently document or use the same `XqA3Ic` read aloud contract:
 

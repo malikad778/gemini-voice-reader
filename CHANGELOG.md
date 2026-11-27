@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.3.0
+
+- Added Follow mode, which highlights the sentence currently being read without changing page DOM.
+- Added A to B loop markers that can be dragged anywhere on the timeline.
+- Added smart text cleanup for links, citations, markdown, emoji symbols, and extra spaces.
+- Added gapless long reading by prefetching the next chunk while the current one plays.
+- Added Read from here and Article actions for long pages.
+- Added Download audio for the current clip.
+- Added local Recent reads history with one click replay.
+- Added Study mode, which repeats each sentence twice.
+- Added Dialogue mode, which alternates accents for a conversational feel.
+- Added a sleep timer with 5, 15, 30, and 60 minute options.
+- Added keyboard shortcuts for play, pause, seek, modes, and tools.
+- Added optional official Gemini API mode with named voices such as Kore, Puck, and Charon.
+- All advanced actions live behind one small Tools button, not a settings panel.
+
 ## 2.2.1
 
 - The player now stays open when playback finishes.
