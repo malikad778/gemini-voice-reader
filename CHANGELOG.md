@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1
+
+- Fixed A to B loop so clicking AB repeats the full clip by default.
+- A to B can now be enabled before audio starts and automatically covers the loaded clip.
+- The ended event now restarts a full range loop instead of finishing playback.
+
 ## 2.3.0
 
 - Added Follow mode, which highlights the sentence currently being read without changing page DOM.

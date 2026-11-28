@@ -4,7 +4,7 @@
 
 This project is for people searching for a Gemini text to speech extension, a read aloud selected text tool, or a Brave Chrome TTS reader with a proper audio player.
 
-> **v2.3.0:** follow along highlight, A to B phrase looping, study mode, dialogue mode, sleep timer, download, recent reads, and optional named voices are now included.
+> **v2.3.1:** A to B loop now repeats the full clip by default. Drag the markers inward only when you want a shorter phrase.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4.svg)](manifest.json)

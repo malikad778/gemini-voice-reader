@@ -863,6 +863,11 @@
     });
     audio.addEventListener('ended', () => {
       if (audio !== activeAudio) return;
+      if (abEnabled && abEnd > abStart) {
+        audio.currentTime = abStart;
+        audio.play().catch(() => {});
+        return;
+      }
       if (loopEnabled) return;
       advanceChunk();
     });
@@ -1218,15 +1223,20 @@
   }
 
   function toggleAB() {
-    if (!activeAudio || !Number.isFinite(activeAudio.duration)) {
-      showNotice('Play audio first, then set an A to B loop.', 3500);
-      return;
-    }
     abEnabled = !abEnabled;
     if (abEnabled) {
-      abStart = clamp(activeAudio.currentTime, 0, Math.max(0, activeAudio.duration - 0.5));
-      abEnd = Math.min(activeAudio.duration, abStart + 5);
-      showNotice('A to B markers ready. Drag them on the timeline.', 4000);
+      const duration = activeAudio && Number.isFinite(activeAudio.duration)
+        ? activeAudio.duration
+        : 0;
+      // Default to the full clip. Drag the markers inward for a shorter region.
+      abStart = 0;
+      abEnd = duration;
+      showNotice(
+        duration > 0
+          ? 'A to B loop set for the full clip. Drag markers for a shorter part.'
+          : 'A to B loop is on. It will cover the full clip when audio loads.',
+        4000
+      );
     } else {
       showNotice('A to B loop is off.', 2500);
     }
@@ -1350,6 +1360,10 @@
     if (duration > 0) {
       ui.slider.max = String(duration);
       ui.slider.disabled = false;
+      if (abEnabled && abEnd <= abStart) {
+        abStart = 0;
+        abEnd = duration;
+      }
     }
 
     if (!isSeeking) {

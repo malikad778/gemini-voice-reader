@@ -1,6 +1,6 @@
 {
   "name": "gemini-voice-reader-everywhere",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": true,
   "description": "Unofficial open source Gemini voice reader for Chrome and Brave with follow along highlight, A to B loop, study mode, dialogue mode, sleep timer, download, named voices, and 0.5x speed.",
   "author": "Adnan Haider (https://github.com/malikad778)",
